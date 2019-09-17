@@ -1,0 +1,87 @@
+body{
+margin: 0;
+width: 100%;
+background-color: #22313f;
+font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    color:#e4f1fe;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+p{
+    font-size: 22px;
+    color:#e4f1fe;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.option {
+    
+    display: flex;
+}
+
+.resultat {
+    
+    display: flex;
+    background-color: blue;
+    align-content: space-between;
+    justify-content: center;
+    color: aliceblue;
+
+}
+
+#sten{
+    width: 100px;
+    margin: 20px;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+
+#papir{
+    width: 100px;
+    margin: 20px;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+#saks{
+    width: 100px;
+    margin: 20px;
+    background-color: darkcyan;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+#sten:hover{
+    background: #e6e6e6;
+}
+#papir:hover{
+    background: #e6e6e6;
+}
+#saks:hover{
+    background: #e6e6e6;
+}

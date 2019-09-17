@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sten, Saks og Papirs</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="column">
+        <div class="option">
+            <div id="sten">STEN</div>
+            <div id="papir">PAPIR</div>
+            <div id="saks">SAKS</div>
+        </div>
+    </div> 
+    <div class="column">
+        <div class="resultat">
+            <p id="result"></p>
+        </div>
+   </div>  
+</div>
+
+
+<script type = "text/javascript">
+// Vælger fra mulighederne i boksene
+const gameOption = document.querySelectorAll('.option');
+
+
+// Spil
+function playGame(e){
+    // Det man vælger som spiller = med Player Option
+    const playerOption = e.target.id;
+
+    // Sætter en function til computerens valg.
+    const computerOption = getComputerOption();
+    const winner = getWinner(playerOption,computerOption);
+    
+
+    //console.log(playerOption,computerOption,winner)
+}
+
+//Computeren valg
+function getComputerOption() {
+    const rand = Math.random();
+    if (rand < 0.34) {
+        return 'sten';
+    }
+    else if(rand <= 0.67){
+        return 'papir';
+    }
+    else{
+        return 'saks'
+    }
+}
+
+// Finder en vinder ud fra vores vores valg ud fra computerens valg
+function getWinner(player,com) {
+    if (player === com){
+        document.getElementById("result").innerHTML = `Det blev uafgjort du valgte ${player}, computeren valgte ${com}`;
+    }
+    else if(player === 'sten'){
+        if (com === 'papir'){
+            document.getElementById("result").innerHTML = `Du tabte med ${player}, computeren valgte ${com}`;
+        } else {
+            document.getElementById("result").innerHTML = `Du Vandt med ${player}, computeren valgte ${com}`;
+        }
+    }
+    else if (player === 'papir'){
+        if(com === 'saks') {
+            document.getElementById("result").innerHTML = `Du tabte med ${player}, computeren valgte ${com}`;
+        } else {
+            document.getElementById("result").innerHTML = `Du Vandt med ${player}, computeren valgte ${com}`;
+        }
+    }
+    else if (player === 'saks'){
+        if(com === 'sten') {
+            document.getElementById("result").innerHTML = `Du tabte med ${player}, computeren valgte ${com}`;
+        } else {
+            document.getElementById("result").innerHTML = `Du Vandt med ${player}, computeren valgte ${com}`;
+        }
+    }
+}
+
+// Når man klikker, starter den funktionen og kører igennem de forskellige valg.
+gameOption.forEach(gameOption => gameOption.addEventListener('click', playGame));
+</script>
