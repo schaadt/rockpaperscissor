@@ -15,8 +15,8 @@
     <div class="column">
         <div class="option">
             <div id="sten">STEN</div>
-            <div id="papir">PAPIR</div>
             <div id="saks">SAKS</div>
+            <div id="papir">PAPIR</div>
         </div>
     </div> 
     <div class="column">
@@ -39,13 +39,13 @@ function playGame(e){
 
     // Sætter en function til computerens valg.
     const computerOption = getComputerOption();
-    const winner = getWinner(playerOption,computerOption);
-    
 
+    // Viser Spilleren og computerens valg og finder ud fra det en vinder i functionen getWinner
+    const winner = getWinner(playerOption,computerOption);
     //console.log(playerOption,computerOption,winner)
 }
 
-//Computeren valg
+//Computeren vælger ud fra et tilfældigt nummer og returner ud fra det nr sten, saks eller papir.
 function getComputerOption() {
     const rand = Math.random();
     if (rand < 0.34) {
@@ -59,7 +59,7 @@ function getComputerOption() {
     }
 }
 
-// Finder en vinder ud fra vores vores valg ud fra computerens valg
+// Finder en vinder ud fra vores vores valg og computerens valg, og udskriver derefter en vinder.
 function getWinner(player,com) {
     if (player === com){
         document.getElementById("result").innerHTML = `Det blev uafgjort du valgte ${player}, computeren valgte ${com}`;
@@ -87,6 +87,7 @@ function getWinner(player,com) {
     }
 }
 
-// Når man klikker, starter den funktionen og kører igennem de forskellige valg.
-gameOption.forEach(gameOption => gameOption.addEventListener('click', playGame));
+ // Når man klikker, starter den funktionen og kører igennem de forskellige valg.
+ gameOption.forEach(gameOption => gameOption.addEventListener('click', playGame));
+
 </script>
