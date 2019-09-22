@@ -62,27 +62,27 @@ function getComputerOption() {
 // Finder en vinder ud fra vores vores valg og computerens valg, og udskriver derefter en vinder.
 function getWinner(player,com) {
     if (player === com){
-        document.getElementById("result").innerHTML = `Det blev uafgjort du valgte ${player}, computeren valgte ${com}`;
+        document.getElementById("result").innerHTML = `Det blev uafgjort du valgte ${player}, Computeren valgte ${com}`;
     }
     else if(player === 'sten'){
         if (com === 'papir'){
-            document.getElementById("result").innerHTML = `Du tabte med ${player}, computeren valgte ${com}`;
+            document.getElementById("result").innerHTML = `Du tabte med ${player}, Computeren valgte ${com}`;
         } else {
-            document.getElementById("result").innerHTML = `Du Vandt med ${player}, computeren valgte ${com}`;
+            document.getElementById("result").innerHTML = `Du Vandt med ${player}, Computeren valgte ${com}`;
         }
     }
     else if (player === 'papir'){
         if(com === 'saks') {
-            document.getElementById("result").innerHTML = `Du tabte med ${player}, computeren valgte ${com}`;
+            document.getElementById("result").innerHTML = `Du tabte med ${player}, Computeren valgte ${com}`;
         } else {
-            document.getElementById("result").innerHTML = `Du Vandt med ${player}, computeren valgte ${com}`;
+            document.getElementById("result").innerHTML = `Du Vandt med ${player}, Computeren valgte ${com}`;
         }
     }
     else if (player === 'saks'){
         if(com === 'sten') {
-            document.getElementById("result").innerHTML = `Du tabte med ${player}, computeren valgte ${com}`;
+            document.getElementById("result").innerHTML = `Du tabte med ${player}, Computeren valgte ${com}`;
         } else {
-            document.getElementById("result").innerHTML = `Du Vandt med ${player}, computeren valgte ${com}`;
+            document.getElementById("result").innerHTML = `Du Vandt med ${player}, Computeren valgte ${com}`;
         }
     }
 }
