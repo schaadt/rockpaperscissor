@@ -34,7 +34,7 @@ const gameOption = document.querySelectorAll('.option');
 
 // Spil
 function playGame(e){
-    // Det man vælger som spiller = med Player Option
+    // Det valg man som spiller tager.
     const playerOption = e.target.id;
 
     // Sætter en function til computerens valg.
@@ -87,7 +87,8 @@ function getWinner(player,com) {
     }
 }
 
- // Når man klikker, starter den funktionen og kører igennem de forskellige valg.
+ // Looper igennem de forskellige valg muligheder og venter på man klikker, når man klikker på en mulighed starter den playGame functionen
+
  gameOption.forEach(gameOption => gameOption.addEventListener('click', playGame));
 
 </script>
